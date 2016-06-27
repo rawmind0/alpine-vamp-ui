@@ -1,4 +1,4 @@
-FROM rawmind/alpine-nginx:1.10.1-1
+FROM rawmind/alpine-nginx:1.10.1-3
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 # Compile and install vamp-ui
@@ -18,7 +18,8 @@ RUN apk add --update nodejs git python make gcc g++ \
   && gulp build \
   && cd / && cp -rp ${SERVICE_SRC}/build/* ${SERVICE_WWW} \
   && apk del nodejs git python make gcc g++ \
-  && rm -rf /var/cache/apk/* /opt/src 
+  && chown -R ${SERVICE_USER}:${SERVICE_GROUP} ${SERVICE_HOME} /opt/monit \
+  && rm -rf /var/cache/apk/* /opt/src
 
 # Adding files
 ADD root /
