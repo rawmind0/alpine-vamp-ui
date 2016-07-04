@@ -6,10 +6,10 @@ ENV SERVICE_NAME=vamp-ui \
     SERVICE_REPO=https://github.com/magneticio/vamp-ui.git \
     SERVICE_SRC=/opt/src/vamp-ui \
     SERVICE_WWW=/opt/nginx/www \
-    SERVICE_USER=nginx \
-    SERVICE_UID=10004 \
-    SERVICE_GROUP=nginx \
-    SERVICE_GID=10004 
+    SERVICE_USER=vamp \
+    SERVICE_UID=10006 \
+    SERVICE_GROUP=vamp \
+    SERVICE_GID=10006 
 
 # Compile and install vamp-ui
 RUN apk add --update nodejs git python make gcc g++ \

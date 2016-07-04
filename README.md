@@ -11,7 +11,7 @@ docker build -t rawmind/alpine-vamp-ui:<version> .
 
 ## Versions
 
-- `0.8.4-4` [(Dockerfile)](https://github.com/rawmind0/alpine-vamp-ui/blob/0.8.4-4/Dockerfile)
+- `0.8.4-5` [(Dockerfile)](https://github.com/rawmind0/alpine-vamp-ui/blob/0.8.4-5/Dockerfile)
 
 ## Configuration
 
