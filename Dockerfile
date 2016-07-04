@@ -1,4 +1,4 @@
-FROM rawmind/alpine-nginx:1.10.1-5
+FROM rawmind/alpine-nginx:1.10.1-6
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 ENV SERVICE_NAME=vamp-ui \
