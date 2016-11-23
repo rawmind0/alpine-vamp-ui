@@ -16,11 +16,13 @@ RUN apk add --update nodejs git python make gcc g++ \
   && mkdir -p /opt/src; cd /opt/src \
   && git clone -b "$SERVICE_VERSION" ${SERVICE_REPO} \
   && cd ${SERVICE_SRC} \
-  && npm install \
+  && npm install bower \
   && npm install gulp \
-  && npm i -g gulp \
-  && gulp build \
-  && cd / && cp -rp ${SERVICE_SRC}/build/* ${SERVICE_WWW} \
+  && npm install \
+  && ./node_modules/.bin/bower --allow-root install \
+  && ./environment.sh \
+  && ./node_modules/.bin/gulp build \
+  && cd / && cp -rp ${SERVICE_SRC}/dist/* ${SERVICE_WWW} \
   && apk del nodejs git python make gcc g++ \
   && rm -rf /var/cache/apk/* /opt/src \
   && addgroup -g ${SERVICE_GID} ${SERVICE_GROUP} \
