@@ -1,8 +1,8 @@
-FROM rawmind/alpine-nginx:1.10.1-7
+FROM rawmind/alpine-nginx:1.10.2-1
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 ENV SERVICE_NAME=vamp-ui \
-    SERVICE_VERSION=0.9.1 \
+    SERVICE_VERSION=0.9.2 \
     SERVICE_REPO=https://github.com/magneticio/vamp-ui.git \
     SERVICE_SRC=/opt/src/vamp-ui \
     SERVICE_WWW=/opt/nginx/www \
